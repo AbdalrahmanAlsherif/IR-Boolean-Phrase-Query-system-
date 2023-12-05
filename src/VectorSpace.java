@@ -31,7 +31,7 @@ public class VectorSpace {
 //        return documentFrequency;
 //    }
 
-    //New
+    //New and correct output
     double computeDF2(String term) {
         int documentFrequency = 0;
 
@@ -49,7 +49,7 @@ public class VectorSpace {
         return documentFrequency;
     }
 
-    public double computeIDF(String term) {
+    public double computeIDF(String term) {    //giving wrong output
         this.term = term;
         int documentFrequency = 0;
         for (HashMap.Entry<String, IndexData> entry : index.entrySet()) {
@@ -62,7 +62,7 @@ public class VectorSpace {
     }
 
 
-    public double computeIDF2(String term) {
+    public double computeIDF2(String term) {    //testing -giving wrong output
 
 
         this.term = term;
@@ -147,7 +147,7 @@ public class VectorSpace {
             }
         }
     }
-    double computeDocumentLength(String doc){
+    double computeDocumentLength(String doc){   //giving wrong output
         double docLength = 0.0;
         for (HashMap.Entry<String, IndexData> entry : index.entrySet()) {
             IndexData item = entry.getValue();
@@ -162,7 +162,7 @@ public class VectorSpace {
         return Math.sqrt(docLength);
 
         }
-    double computeDocumentLength2(String doc) {
+    double computeDocumentLength2(String doc) {    //for testing
         double docLength = 0.0;
 
         // Compute IDF for the document once

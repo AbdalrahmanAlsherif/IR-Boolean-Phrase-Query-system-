@@ -69,7 +69,7 @@ public class Main {
         for (int i = 0; i < wordsArray.length; i++) {
             // Create a new row for each word
             //
-            st3.addRow(wordsArray[i], String.valueOf(calc.computeDF2(positionalIndex.get(posCalc.tokens.get(i)).token)), String.valueOf(calc.computeIDF2(positionalIndex.get(posCalc.tokens.get(i)).token)));
+            st3.addRow(wordsArray[i], String.valueOf(calc.computeDF2(positionalIndex.get(posCalc.tokens.get(i)).token)), String.valueOf(calc.computeIDF(positionalIndex.get(posCalc.tokens.get(i)).token)));
         }
         //prints table
         st3.print();
@@ -89,7 +89,7 @@ public class Main {
         for (int i = 0; i < docArray.size(); i++) {
             // Create a new row for each word
             //replace ? with ___
-            st5.addRow(docArray.get(i), String.valueOf(calc.computeDocumentLength2(docArray.get(i))));
+            st5.addRow(docArray.get(i), String.valueOf(calc.computeDocumentLength(docArray.get(i))));
         }
         //prints the table
         st5.print();
